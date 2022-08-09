@@ -6,8 +6,9 @@
 }
 
 html {
-  background-color: forestgreen;
+  /* background-color: #42BD4C; */
   scroll-behavior: smooth;
+  background-image: linear-gradient(60deg, #42BD4C, #A0DEA5 );
 }
 
 h1 {
@@ -18,11 +19,11 @@ h1 {
 
 
 a {
-  color: black;
+  color: #42BD4C;
 }
 
 p {
-  color: whitesmoke;
+  color: darkslategrey;
 }
 
 .title {
@@ -35,6 +36,18 @@ p {
 
 }
 
+h2 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+h3 {
+  font-size: 25px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
 
 /* Navbar */
 
@@ -44,39 +57,236 @@ p {
   width: 100%;
   position: fixed;
   background-color: cornsilk;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-logo {
-  height: 36px;
-  margin-left: 24px;
-  border: 3px solid burlywood;
+  /* height: 36px;
+  margin-left: 24px; */
+  /* border: 3px solid burlywood;
   border-radius: 10%;
   box-shadow: 1px 1px brown;
-  transition: all 0.5s;
+  transition: all 0.5s; */
+  text-align: center;
+  /* since the logo is text in this case, will use below values to match nav-links */
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 16px;
 }
 
 .nav-logo:hover {
-  border: 3px solid forestgreen;
+  /* border: 3px solid forestgreen;
   /* transform: rotate(5deg); */
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
+  background-color: #DEF6AB;
+  color: #5D9534;
 
 }
 
 .nav-links {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  margin-left: auto;
+  /* margin-left->auto put the nav-links to the right side of the navbar */
+  margin-right: 12px;
+  /* ^gives the nav-links a little space on the right side  */
+}
+
+.nav-links a {
   text-decoration: none;
-  ;
+  display: block;
+  /* ^to make <a> which is a inline element to block element */
+  font-size: 20px;
+  padding: 16px;
+}
+
+.nav-links a:hover {
+  background-color: #DEF6AB;
+  cursor: pointer;
+  color: #5D9534;
+  /* text-shadow: #5D9534; */
 }
 
 /* Hero Section   */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #5D9534 solid 1px;
+  background-image: linear-gradient(60deg, #1443EB, #14AFEB), url(img/pexels-johannes-plenio-1146714.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
+.hero-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 128px 72px 72px;
+  gap: 24px;
+  padding: 32px;
+  border: 3px solid #5D9534;
+  border-radius: 50px;
+  box-shadow: 2px 2px 20px 2px;
+  background: #DEF6AB;
 
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  align-items: flex-start;
+  gap: 20px;
+  padding-left: 32px;
+}
+
+.text-box h1 {
+  color: #5D9534;
+  text-shadow: 2px 2px #DEF6AB;
+}
+
+.text-box .notify-me a {
+  color: rgb(84, 77, 77);
+}
+
+.hero_image {
+  object-fit: cover;
+  flex: 1 1 auto;
+  max-width: 300px;
+  border: 5px #5D9534 solid;
+  /* border-radius: 50%; */
+  box-shadow: 2px 2px 3px;
+
+}
+
+.notify-me {
+  font-weight: 900;
+  padding: 4px 24px;
+  border-radius: 4px;
+  background-color: burlywood;
+  align-self: center;
+}
+
+.notify-me:hover {
+  cursor: pointer;
+  background-color: rgb(221, 169, 102);
+  box-shadow: 1px 1px burlywood;
+}
 /* Completed Projects */
 
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 0px 24px 96px 24px;
+  
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  gap: 8px;
+  padding: 24px;
+  color: white;
+  text-shadow: 2px 2px 1px black; 
+}
+
+.project-icon {
+  width: 200px;
+  height: 200px;
+  border: 12px solid darkgreen;
+  border-radius: 32px;
+  box-shadow: 2px 2px 3px black;
+  object-fit: contain;
+  background-color: whitesmoke;
+}
+
+.project-text {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  flex-wrap: wrap;
+  max-width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+}
 
 /* Current Projects */
 
+    /* follows the same style as completed projects */
+.current-projects h2 {
+  align-items: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
 
 /* Contact Section   */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(60deg, yellow, red);
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+  align-items: center;
 
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  border: 12px solid lightblue;
+  border-radius: 24px;
+  box-shadow: 2px 2px 3px black;
+  margin: 64px 48px;
+  padding: 32px 48px;
+  max-width: 1100px;
+  gap: 32px;
+}
+
+.contact-section .input {
+  display: flex;
+  padding-right: 24px;
+  font-size : 20px;
+}
+
+input {
+  margin-left: 16px;
+}
+
+.signup-button {
+  flex-shrink: 0;
+  height: 36px;
+  width: 128px;
+  padding: 4px 24px;
+  margin-right: 36px;
+  background-color: #1443EB;
+  color: white;
+  border-radius: 4px;
+  border: 3px solid lightblue;
+  box-shadow: 2px 2px 3px black;
+  font-weight: 400;
+  justify-content: center;
+
+}
+
+.signup-button:hover {
+  font-weight: 800;
+  background-color: skyblue;
+  border-color: #1443EB;
+  cursor: pointer;
+}
 
 /* Footer   */
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  color: black;
+  background-image: linear-gradient(60deg, #5D9534, #A0DEA5);
+}
