@@ -1,0 +1,82 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: forestgreen;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+
+a {
+  color: black;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.title {
+  color: white;
+  text-shadow: 2px 2px darkgreen;
+  text-align: center;
+  padding: 48px;
+  padding-top: 96px;
+  border-top: 1px solid darkgreen;
+
+}
+
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  background-color: cornsilk;
+}
+
+.nav-logo {
+  height: 36px;
+  margin-left: 24px;
+  border: 3px solid burlywood;
+  border-radius: 10%;
+  box-shadow: 1px 1px brown;
+  transition: all 0.5s;
+}
+
+.nav-logo:hover {
+  border: 3px solid forestgreen;
+  /* transform: rotate(5deg); */
+  transition: all 0.5s;
+
+}
+
+.nav-links {
+  text-decoration: none;
+  ;
+}
+
+/* Hero Section   */
+
+
+/* Completed Projects */
+
+
+/* Current Projects */
+
+
+/* Contact Section   */
+
+
+/* Footer   */
